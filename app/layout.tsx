@@ -3,8 +3,7 @@ import {  Playwrite_CA } from "next/font/google";
 import "./globals.css";
 
 const playwrite = Playwrite_CA({
-    subsets: ["latin"],
-    weight: ["100","200","300","400"],
+
 });
 
 export const metadata: Metadata = {
