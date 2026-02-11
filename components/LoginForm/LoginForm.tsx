@@ -19,7 +19,7 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
             setError('')
             setLoading(true)
 
-            const res = await fetch('http://localhost:8017/v1/auth/login', {
+            const res = await fetch('https://valentine-be.onrender.com/v1/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, password })
