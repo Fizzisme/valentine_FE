@@ -8,7 +8,9 @@ export function AnimatedDate({ onDone }: { onDone: () => void }) {
         return () => clearTimeout(timer);
     }, [onDone]);
     return (
-        <div className="flex items-center gap-2 text-4xl font-semibold text-pink-600">
+        <div className="flex items-center gap-2 text-4xl font-semibold text-pink-600"
+        style={{height: '100px'}}
+        >
             {/* Day */}
             <SlidingNumber fromNumber={0} number={14} />
 

@@ -15,7 +15,8 @@ export function IntroText({ onDone }: { onDone: () => void }) {
     return (
         <div className="flex items-center justify-center min-h-screen">
             <RotatingTextContainer
-                className="text-4xl font-semibold text-pink-600 text-center max-w-xl"
+                className="text-4xl font-semibold text-pink-600 text-center"
+                style={{ width: "1200px", height: '100px' }}
                 text={[
                     '',
                     'Hi babyboo',
