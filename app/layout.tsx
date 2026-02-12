@@ -7,7 +7,7 @@ const playwrite = Playwrite_CA({
 });
 
 export const metadata: Metadata = {
-    title: "Valentine ",
+    title: "Valentine - for Julie",
     description: "Valentine Chat App",
 };
 

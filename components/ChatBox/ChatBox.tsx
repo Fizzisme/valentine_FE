@@ -99,7 +99,7 @@ export default function ChatBox() {
     if (!user) return null
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-pink-50">
+        <div className="flex items-center justify-center min-h-screen">
             <div
                 className="relative w-[550px] p-5 rounded-[30px] bg-white"
                 style={{

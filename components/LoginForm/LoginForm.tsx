@@ -84,6 +84,7 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                                         className='absolute left-0 top-[-10px] h-[1px] w-[185px] bg-[#D63A6A] rotate-5'
                                     ></div>
                                     <Image
+                                        priority
                                         className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2'
                                         src={'/heart.png'}
                                         alt={'trai tim'}
@@ -177,7 +178,7 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                                 </form>
                             </TabsContent>
                         </TabsContents>
-                        <Image className='absolute right-[-9px] bottom-[-2px] rounded-br-xl' style={{
+                        <Image priority className='absolute right-[-9px] bottom-[-2px] rounded-br-xl' style={{
                             zIndex: '0',
                             opacity: '0.8'
                         }} src='/rose.png' alt='hoa' height={80} width={80}/>
