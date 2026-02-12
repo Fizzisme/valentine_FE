@@ -19,13 +19,19 @@ export default function Message({ name, message, isMe }: MessageProps) {
                     isMe ? 'right-4' : 'left-4'
                 }`}
             >
-                <span className="text-xs font-bold text-[#ff9bb0] uppercase tracking-wide">
+                <span className="text-xs font-bold text-[#F283AF] uppercase tracking-wide"
+                style={{color: '#F283AF'}}>
                     {name}
                 </span>
             </div>
 
             {/* MESSAGE BOX */}
-            <div className="relative rounded-2xl border-[2px] border-[#ff9bb0] bg-[#ffe8f5] px-5 py-3 pt-4 text-[#bf5a7a] shadow-sm">
+            <div className="relative rounded-2xl border-[2px] border-[#ff9bb0] bg-[#ffddd4] px-5 py-3 pt-4 text-[#ff44a3] shadow-sm"
+            style={{
+                backgroundColor: '#ffddd4',
+                color: '#ff44a3'
+            }}
+            >
                 <p className="font-medium text-sm leading-relaxed break-words whitespace-pre-wrap">
                     {message}
                 </p>

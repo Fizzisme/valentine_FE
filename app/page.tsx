@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <main
             className="min-h-screen flex items-center justify-center
-      bg-gradient-to-br from-rose-100 via-pink-100 to-rose-200"
+      bg-[#FAC1B5]"
         >
             <AnimatePresence mode="wait">
                 {/* 🗓 STEP 1: DATE */}

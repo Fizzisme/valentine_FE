@@ -103,7 +103,7 @@ export default function ChatBox() {
             <div
                 className="relative w-[550px] p-5 rounded-[30px] bg-white"
                 style={{
-                    border: `3px solid ${styles.borderColor}`,
+                    border: `3px solid #F283AF`,
                     boxShadow: '0 10px 25px rgba(255, 155, 176, 0.3)',
                 }}
             >
@@ -113,10 +113,11 @@ export default function ChatBox() {
                     <div className="flex-1 relative rounded-2xl overflow-hidden bg-black/5">
                         <div
                             className="absolute inset-0 rounded-2xl border-[2px]"
-                            style={{ borderColor: styles.borderColor }}
                         />
 
-                        <div className="absolute inset-0 p-4 overflow-y-auto flex flex-col gap-3">
+                        <div className="absolute inset-0 p-4 overflow-y-auto flex flex-col gap-3 bg-[#FBF4EB]"
+                        style={{backgroundColor: '#FBF4EB', border: '2px solid #F283AF'}}
+                        >
                             {messages.map((msg) => {
                                 const isMe = msg.from === user.name
 
@@ -141,9 +142,10 @@ export default function ChatBox() {
                     {/* SIDEBAR */}
                     <div className="flex flex-col gap-3 w-[80px]">
                         <div
-                            className="h-[80px] rounded-2xl flex items-center justify-center border-[2px]"
-                            style={{ borderColor: styles.borderColor, background: styles.bgColor }}
+                            className="h-[80px] rounded-2xl flex items-center justify-center border-[2px] overflow-hidden"
+                            style={{ borderColor: '#F283AF', background: styles.bgColor }}
                         >
+                            <Image src={'/FiCuTo.jpg'} alt={'FI cu to'} height={80} width={80} />
                         </div>
 
                         <div className="grid grid-cols-2 gap-2 flex-1">
@@ -151,9 +153,9 @@ export default function ChatBox() {
                                 <div
                                     key={i}
                                     className="flex items-center justify-center rounded-xl bg-white border-[2px]"
-                                    style={{ borderColor: styles.borderColor }}
+                                    style={{ borderColor: '#F283AF' }}
                                 >
-                                    <Icon size={18} color="#ff9bb0" />
+                                    <Icon size={18} color="#F283AF" />
                                 </div>
                             ))}
                         </div>
@@ -163,12 +165,10 @@ export default function ChatBox() {
                 {/* INPUT */}
                 <div className="flex gap-3 mt-5 relative">
                     <div
-                        className="w-[64px] h-[64px] rounded-full relative cursor-pointer active:scale-95 transition"
+                        className="w-[64px] h-[64px] top-[-10px] rounded-full relative cursor-pointer active:scale-95 transition"
                         style={{
-                            background: `
-      radial-gradient(circle at 30% 30%, #fff 0%, #ffd6ec 40%, #ffb3d9 70%, #ff9bc0 100%)
-    `,
-                            border: "3px solid #ff8fbc",
+                            background: `#ffddd4`,
+                            border: "3px solid #F283AF",
                             boxShadow: `
       8px 8px 18px rgba(255,120,170,0.45),
       -6px -6px 14px rgba(255,255,255,0.9),
@@ -181,7 +181,7 @@ export default function ChatBox() {
                         <div
                             className="absolute inset-[10px] rounded-full"
                             style={{
-                                background: "radial-gradient(circle, #fff 0%, #ffd0e8 70%)",
+                                background: "#ffddd4",
                                 boxShadow: "inset 2px 2px 5px rgba(0,0,0,0.15)"
                             }}
                         />
@@ -191,7 +191,7 @@ export default function ChatBox() {
                             className="absolute left-1/2 top-[6px] w-[3px] h-[14px] rounded"
                             style={{
                                 transform: "translateX(-50%)",
-                                background: "#ff5fa2",
+                                background: "#F283AF",
                                 boxShadow: "0 0 4px rgba(255,95,162,0.6)"
                             }}
                         />
@@ -207,9 +207,9 @@ export default function ChatBox() {
                             placeholder={`Nhắn cho ${receiver}...`}
                             className="w-full rounded-2xl border-[2px] px-5 py-3 outline-none"
                             style={{
-                                borderColor: styles.borderColor,
-                                background: styles.bgColor,
-                                color: styles.textColor,
+                                borderColor: '#F283AF',
+                                background: '#ffddd4',
+                                color: '#ff44a3'
                             }}
                         />
                     </div>
