@@ -79,26 +79,19 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                         <TabsContents style={{ padding: '24px 0', position: 'relative', zIndex: '10' }}>
                             {/* INTRODUCE TAB */}
                             <TabsContent value="introduce" className="flex flex-col" style={{ gap: '24px' }}>
-                                <CardHeader>
-                                    <div
-                                        className='absolute left-0 top-[-10px] h-[1px] w-[185px] bg-[#D63A6A] rotate-5'
-                                    ></div>
-                                    <Image
-                                        priority
-                                        className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2'
-                                        src={'/heart.png'}
-                                        alt={'trai tim'}
-                                        height={50}
-                                        width={50}
-                                    />
+                                <Image priority  className='absolute' src={'/introduce.png'}
+                                       style={ {top: '-40px'} }
+                                       height={800} width={500} alt={'gioi thieu'}/>
 
-                                    <div
-                                        className='absolute right-0 top-[-10px] h-[1px] w-[185px] bg-[#D63A6A] -rotate-5'
-                                    ></div>
-                                    <CardTitle style={{ color: '#E75480' }}>Hi Julie</CardTitle>
-                                    <CardDescription style={{ color: '#D63A6A' }}>
+                                <CardHeader>
+                                    <CardTitle style={{ padding: '5px 30px 0 30px', color: '#E75480' }}>Hi Julie</CardTitle>
+                                    <CardDescription style={{padding: '0 30px', color: '#D63A6A' }}>
                                         Thank you for coming into my life and making it more beautiful.
                                     </CardDescription>
+                                    <CardContent
+                                    style={{color: '#E75480', padding: '0 30px'}}
+                                    >You are the little piece of magic that turns ordinary days into something special.Thank you for being my smile and my happiness in the simplest moments.</CardContent>
+                                    <CardFooter></CardFooter>
                                 </CardHeader>
                             </TabsContent>
 
@@ -178,10 +171,6 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                                 </form>
                             </TabsContent>
                         </TabsContents>
-                        <Image priority className='absolute right-[-9px] bottom-[-2px] rounded-br-xl' style={{
-                            zIndex: '0',
-                            opacity: '0.8'
-                        }} src='/rose.png' alt='hoa' height={80} width={80}/>
 
 
 

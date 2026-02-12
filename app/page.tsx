@@ -6,10 +6,10 @@ import { LoginForm } from '@/components/LoginForm/LoginForm';
 import { AnimatedDate } from '@/components/AnimatedDate/AnimatedDate';
 import { IntroText } from '@/components/IntroText/IntroText';
 import FloatingHearts from '@/components/FloatingHearts/FloatingHearts';
-import DoorScene from '@/components/DoorScene/DoorScene';
 import GalleryHall from '@/components/GalleryHall/GalleryHall';
 import ChatBox from '@/components/ChatBox/ChatBox';
-type Scene = 'date' | 'intro' | 'login' | 'door' | 'gallery' | 'chat'
+import LoveEnvelope from '@/components/LoveEnvelope/LoveEnvelope';
+type Scene = 'date' | 'intro' | 'login' | 'envelope' | 'gallery' | 'chat'
 
 export default function Home() {
 
@@ -17,7 +17,6 @@ export default function Home() {
         Scene
     >('date');
 
-    const [isDoorOpen, setIsDoorOpen] = useState(false);
     return (
         <main
             className="min-h-screen flex items-center justify-center
@@ -62,17 +61,15 @@ export default function Home() {
                     </motion.div>
                 )}
 
-                {scene === 'door' && (
+                {scene === 'envelope' && (
                     <motion.div
-                        key="door"
+                        key="envelope"
                         initial={{ opacity: 0, y: 20, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                     >
                         <FloatingHearts/>
-                        <DoorScene isOpen={isDoorOpen}
-                                   onOpen={() => setIsDoorOpen(true)}
-                                   onZoomComplete={() => setScene('gallery')}/>
+                        <LoveEnvelope onZoomComplete={() => setScene('gallery')}/>
                     </motion.div>
                 )}
 

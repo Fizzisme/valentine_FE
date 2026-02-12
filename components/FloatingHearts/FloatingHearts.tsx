@@ -66,7 +66,11 @@ export default function FloatingHearts() {
                     >
                         <Heart
                             size={p.size}
-                            className="text-pink-500 drop-shadow-lg"
+                            fill='#c43670'
+                            className="text-[#c43670] drop-shadow-lg"
+                            style={{
+                                color: '#c43670'
+                            }}
                         />
                     </motion.div>
                 ))}
