@@ -7,6 +7,7 @@ import { PandaDialog } from '@/components/PandaDialog/PandaDialog'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import * as React from 'react'
+import Image from 'next/image';
 
 export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
     const [name, setName] = useState('')
@@ -51,7 +52,7 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.6 }}
             >
-                <Tabs defaultValue="introduce">
+                <Tabs defaultValue="introduce" style={{minWidth: '400px'}}>
                     <TabsList
                         style={{
                             gap: '5px',
@@ -60,25 +61,39 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                         }}
                     >
                         <TabsTrigger value="introduce">
-                            <div style={{ padding: '5px', cursor: 'pointer', color: '#E75480' }}>
+                            <div style={{ cursor: 'pointer', color: '#E75480' }}>
                                 Introduce
                             </div>
                         </TabsTrigger>
                         <TabsTrigger value="login">
-                            <div style={{ padding: '5px', cursor: 'pointer', color: '#E75480' }}>
+                            <div style={{  cursor: 'pointer', color: '#E75480' }}>
                                 Login
                             </div>
                         </TabsTrigger>
                     </TabsList>
 
                     <Card
-                        className="shadow-none"
-                        style={{ boxShadow: '0px 0px 5px 5px rgba(0,0,0,0.05)' }}
+                        className="shadow-none relative overflow-hidden"
+                        style={{ boxShadow: '0px 0px 5px 5px rgba(0,0,0,0.05)'}}
                     >
-                        <TabsContents style={{ padding: '24px 0' }}>
+                        <TabsContents style={{ padding: '24px 0', position: 'relative', zIndex: '10' }}>
                             {/* INTRODUCE TAB */}
                             <TabsContent value="introduce" className="flex flex-col" style={{ gap: '24px' }}>
                                 <CardHeader>
+                                    <div
+                                        className='absolute left-0 top-[-10px] h-[1px] w-[185px] bg-[#D63A6A] rotate-5'
+                                    ></div>
+                                    <Image
+                                        className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2'
+                                        src={'/heart.png'}
+                                        alt={'trai tim'}
+                                        height={50}
+                                        width={50}
+                                    />
+
+                                    <div
+                                        className='absolute right-0 top-[-10px] h-[1px] w-[185px] bg-[#D63A6A] -rotate-5'
+                                    ></div>
                                     <CardTitle style={{ color: '#E75480' }}>Hi Julie</CardTitle>
                                     <CardDescription style={{ color: '#D63A6A' }}>
                                         Thank you for coming into my life and making it more beautiful.
@@ -127,7 +142,7 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                                             />
                                         </div>
 
-                                        <div className="flex items-center gap-2 cursor-pointer">
+                                        <div className="flex items-center gap-2 cursor-pointer justify-center">
                                             <p className="text-sm text-muted-foreground">
                                                 If you don&apos;t know, click this Panda
                                             </p>
@@ -162,6 +177,14 @@ export function LoginForm({ onSuccess }: { onSuccess: () => void }) {
                                 </form>
                             </TabsContent>
                         </TabsContents>
+                        <Image className='absolute right-[-9px] bottom-[-2px] rounded-br-xl' style={{
+                            zIndex: '0',
+                            opacity: '0.8'
+                        }} src='/rose.png' alt='hoa' height={80} width={80}/>
+
+
+
+
                     </Card>
                 </Tabs>
             </motion.div>

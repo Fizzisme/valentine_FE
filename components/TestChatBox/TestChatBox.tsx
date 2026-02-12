@@ -16,7 +16,7 @@ interface User {
     name: string
 }
 
-export default function ChatBox() {
+export default function TestChatBox() {
     const styles = {
         borderColor: '#ff9bb0',
         bgColor: '#ffe8f5',

@@ -3,9 +3,7 @@
 import { RotatingText, RotatingTextContainer } from '@/components/animate-ui/primitives/texts/rotating';
 import { useEffect } from 'react';
 
-interface IntroTextProps {
-    onFinish?: () => void;
-}
+
 
 export function IntroText({ onDone }: { onDone: () => void }) {
     useEffect(() => {
