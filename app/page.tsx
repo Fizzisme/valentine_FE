@@ -57,7 +57,7 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                     >
-                        <LoginForm onSuccess ={()=> setScene('door')} />
+                        <LoginForm onSuccess ={()=> setScene('envelope')} />
                     </motion.div>
                 )}
 
