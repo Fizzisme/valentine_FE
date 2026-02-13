@@ -164,37 +164,12 @@ export default function ChatBox() {
 
                 {/* INPUT */}
                 <div className="flex gap-3 mt-5 relative">
-                    <div
-                        className="w-[64px] h-[64px] top-[-10px] rounded-full relative cursor-pointer active:scale-95 transition"
-                        style={{
-                            background: `#ffddd4`,
-                            border: "3px solid #F283AF",
-                            boxShadow: `
-      8px 8px 18px rgba(255,120,170,0.45),
-      -6px -6px 14px rgba(255,255,255,0.9),
-      inset 3px 3px 6px rgba(255,255,255,0.8),
-      inset -4px -4px 10px rgba(255,120,170,0.35)
-    `
-                        }}
-                    >
-                        {/* lõi trong tạo cảm giác lõm */}
-                        <div
-                            className="absolute inset-[10px] rounded-full"
-                            style={{
-                                background: "#ffddd4",
-                                boxShadow: "inset 2px 2px 5px rgba(0,0,0,0.15)"
-                            }}
-                        />
 
-                        {/* vạch chỉ hướng giống nút volume */}
-                        <div
-                            className="absolute left-1/2 top-[6px] w-[3px] h-[14px] rounded"
-                            style={{
-                                transform: "translateX(-50%)",
-                                background: "#F283AF",
-                                boxShadow: "0 0 4px rgba(255,95,162,0.6)"
-                            }}
-                        />
+                    <div
+                        className="h-[60px] rounded-2xl flex items-center justify-center border-[2px] overflow-hidden"
+                        style={{ borderColor: '#F283AF', background: styles.bgColor,position: 'relative', top: '-5px' }}
+                    >
+                        <Image src={'/Truc3.jpg'} alt={'Truc cu te'} height={80} width={80} />
                     </div>
 
 

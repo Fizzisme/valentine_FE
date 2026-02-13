@@ -5,10 +5,12 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const images = [
-    { id: 1, src: '/FTRUC.jpg', caption: 'The day you smiled at me 🌸' },
-    { id: 2, src: '/FTRUC1.jpg', caption: 'Our little happy moment 💕' },
-    { id: 3, src: '/FTRUC2.jpg', caption: 'Every second with you matters ✨' },
-    { id: 4, src: '/FTRUC3.jpg', caption: 'You are my favorite person 💖' },
+    { id: 1, src: '/TRUC1.jpg', caption: 'The day you smiled at me 🌸' },
+    { id: 2, src: '/TRUC2.jpg', caption: 'The day you smiled at me 🌸' },
+    { id: 3, src: '/FTRUC.jpg', caption: 'The day you smiled at me 🌸' },
+    { id: 4, src: '/FTRUC1.jpg', caption: 'Our little happy moment 💕' },
+    { id: 5, src: '/FTRUC2.jpg', caption: 'Every second with you matters ✨' },
+    { id: 6, src: '/FTRUC3.jpg', caption: 'You are my favorite person 💖' },
 ];
 
 export default function GalleryHall({
