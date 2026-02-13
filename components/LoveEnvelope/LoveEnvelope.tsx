@@ -13,7 +13,9 @@ export default function LoveEnvelope({ onZoomComplete }: LoveEnvelopeProps) {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="w-screen h-screen flex items-center justify-center bg-pink-100 overflow-hidden relative">
+        <div className="w-screen h-screen flex items-center justify-center  overflow-hidden relative"
+        style={{backgroundColor: "#FAC1B5"}}
+        >
 
             <motion.div
                 onClick={() => setOpen(true)}
