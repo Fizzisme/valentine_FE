@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const images = [
-    { id: 1, src: '/TRUC1.jpg', caption: 'The day you smiled at me 🌸' },
-    { id: 2, src: '/TRUC2.jpg', caption: 'The day you smiled at me 🌸' },
+    { id: 1, src: '/Truc1.jpg', caption: 'The day you smiled at me 🌸' },
+    { id: 2, src: '/Truc2.jpg', caption: 'The day you smiled at me 🌸' },
     { id: 3, src: '/FTRUC.jpg', caption: 'The day you smiled at me 🌸' },
     { id: 4, src: '/FTRUC1.jpg', caption: 'Our little happy moment 💕' },
     { id: 5, src: '/FTRUC2.jpg', caption: 'Every second with you matters ✨' },
